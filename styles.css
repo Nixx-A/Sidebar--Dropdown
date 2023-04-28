@@ -1,0 +1,82 @@
+* {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ul li a {
+  color: #000;
+}
+
+.icon {
+  color: #222121;
+  transition: .5s;
+}
+
+.sidebar {
+  min-height: 100vh;
+  position: fixed;
+  width: 230px;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  background-color: aliceblue;
+  transition: all 0.5s ease;
+}
+
+.sidebar ul li a{
+  display: block;
+  padding: 5px 13px;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgb(193, 197, 201);
+}
+
+ul li ul li {
+  display: none;
+  transition: all .5s;
+  animation-name: 'unhidde';
+  animation-duration: .5s;
+}
+
+.unhidde li {
+  display: block;
+  transition: all .5s;
+}
+
+.section {
+  width: calc(100% - 230px);
+  margin-left: 230px;
+  transition: all .5s ease;
+}
+
+.section .top_navbar{
+  background: aliceblue;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+body.active .sidebar{
+  left: -230px;
+}
+
+body.active .section{
+  margin-left: 0;
+  width: 100%;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+  transition: .5s;
+}
